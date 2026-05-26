@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Gemini - Guía Completa de Proveedores de IA</title>
+    <link rel="stylesheet" href="estilos-gemini.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="gemini-header">
+    <div class="header-overlay">
+        <h1>Google Gemini</h1>
+        <p>La IA multimodal nativa e integrada en el ecosistema de Google</p>
+    </div>
+</header>
+
+<main class="gemini-container">
+
+    <section class="gemini-card intro-section">
+        <h2>¿Qué es Google Gemini?</h2>
+        <p>Gemini es el modelo de inteligencia artificial generativa más avanzado de Google. A diferencia de otros modelos clásicos, fue construido desde cero para ser <strong>multimodal nativo</strong>, lo que significa que puede comprender, operar y combinar de manera fluida diferentes tipos de información, incluyendo texto, código, audio, imágenes y videos de forma simultánea.</p>
+
+        <div class="target-audience">
+            <h3><i class="fa-solid fa-users"></i> Público Objetivo</h3>
+            <p>Estudiantes, investigadores académicos, profesionales integrados en el ecosistema de Google Workspace (Docs, Sheets, Gmail) y desarrolladores de software que requieren procesar volúmenes masivos de datos o bases de código complejas.</p>
+        </div>
+    </section>
+
+    <section class="gemini-card models-section">
+        <h2>Modelos y Versiones Actuales</h2>
+        <p>La familia de modelos Gemini se adapta a distintas capacidades de procesamiento:</p>
+        <div class="models-grid">
+            <div class="model-item">
+                <h4>Gemini Ultra</h4>
+                <p>El modelo más grande y capaz para tareas de alta complejidad y razonamiento avanzado.</p>
+            </div>
+            <div class="model-item">
+                <h4>Gemini Pro</h4>
+                <p>El modelo intermedio y versátil, diseñado para una amplia gama de tareas y rendimiento a escala.</p>
+            </div>
+            <div class="model-item">
+                <h4>Gemini Flash</h4>
+                <p>Un modelo ligero, optimizado para la velocidad y la rentabilidad en respuestas rápidas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="analysis-grid">
+        <div class="gemini-card strength-card">
+            <h3><i class="fa-solid fa-circle-check"></i> Fortalezas</h3>
+            <ul>
+                <li><strong>Ventana de contexto masiva:</strong> Capacidad líder en el mercado para procesar hasta 2 millones de tokens (libros enteros o horas de video).</li>
+                <li><strong>Integración con Google Workspace:</strong> Conexión nativa en tiempo real con YouTube, Drive, Maps y Gmail mediante extensiones.</li>
+                <li><strong>Análisis Multimodal Real:</strong> Excelente comprensión y cruce de datos entre imágenes, audio y video simultáneamente.</li>
+                <li><strong>Búsqueda en vivo:</strong> Validación directa y contrastación de datos usando el motor de búsqueda de Google.</li>
+            </ul>
+        </div>
+
+        <div class="gemini-card weakness-card">
+            <h3><i class="fa-solid fa-circle-xmark"></i> Debilidades</h3>
+            <ul>
+                <li><strong>Razonamiento lógico-matemático:</strong> En tareas de programación muy abstractas o lógica pura, a veces puede quedarse por detrás de Claude.</li>
+                <li><strong>Consistencia en instrucciones largas:</strong> Tiende a volverse demasiado creativo o perder el hilo de restricciones estrictas si no se delimita bien el prompt.</li>
+                <li><strong>Filtros de seguridad restrictivos:</strong> Sus políticas de seguridad a veces bloquean consultas inofensivas por exceso de precaución.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="gemini-card prompts-section">
+        <h2>Tips de Valor: Ingeniería de Prompts para Gemini</h2>
+        <p>Para extraer el máximo valor de Gemini, aprovecha su ventana de contexto y su conexión a internet. Aquí tienes tres plantillas interactivas que puedes usar directamente:</p>
+
+        <div class="prompt-box">
+            <div class="prompt-header">
+                <span class="prompt-tag">Análisis de Datos Completos</span>
+                <button class="btn-copy" onclick="copiarPrompt('prompt1', this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+            </div>
+            <div class="prompt-body">
+                <code id="prompt1">"Actúa como un analista de datos experto. Te voy a proporcionar este documento extenso [pegar texto o transcribir video]. Realiza un análisis exhaustivo organizando la información en: 1) Hallazgos principales, 2) Contradicciones o inconsistencias encontradas y 3) Una tabla comparativa de los datos numéricos. Usa tu motor de búsqueda integrado para validar si los datos de este informe coinciden con las tendencias globales actuales de este año."</code>
+            </div>
+        </div>
+
+        <div class="prompt-box">
+            <div class="prompt-header">
+                <span class="prompt-tag">Búsqueda e Investigación en Vivo</span>
+                <button class="btn-copy" onclick="copiarPrompt('prompt2', this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+            </div>
+            <div class="prompt-body">
+                <code id="prompt2">"Utiliza la búsqueda de Google en tiempo real para investigar las 3 últimas actualizaciones de [Tema/Tecnología] lanzadas este mes. Compendia los cambios clave, añade los enlaces de las fuentes oficiales encontradas y genera un resumen ejecutivo de 200 palabras orientado a un perfil técnico corporativo."</code>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script>
+        function copiarPrompt(idElemento, boton) {
+            const codigoText = document.getElementById(idElemento).innerText;
+            navigator.clipboard.writeText(codigoText).then(() => {
+                // Cambio visual temporal en el botón
+                boton.innerHTML = '<i class="fa-solid fa-check"></i> ¡Copiado!';
+                boton.classList.add('copiado');
+
+                // Restaurar el botón original después de 2 segundos
+                setTimeout(() => {
+                    boton.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar';
+                    boton.classList.remove('copiado');
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar el texto: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
