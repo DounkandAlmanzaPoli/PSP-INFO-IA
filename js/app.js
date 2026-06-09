@@ -1,4 +1,4 @@
-console.log("🤖 Proyecto PSP-INFO-IA iniciado");
+
 
 // Navegación activa al hacer scroll
 document.addEventListener('DOMContentLoaded', function() {
