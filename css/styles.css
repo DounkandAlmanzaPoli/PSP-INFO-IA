@@ -4,7 +4,431 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #0066ff;
+    --secondary-color: #ff6b6b;
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --light-text: #666;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Sección Hero */
+.hero {
+    background-image: url("../images/Fondo-index.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 20px;
+    text-align: center;
+    min-height: 60vh;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideDown 0.8s ease;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+/* Sección Importancia IA */
+.importance-section {
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 4rem 0;
+}
+
+.importance-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.importance-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.importance-section p {
+    color: var(--text-color);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 820px;
+    margin: 0 auto 2.5rem;
+}
+
+.importance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.intro-section {
+    background-color: #eef4ff;
+    padding: 3rem 0;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-section h2 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro-section p {
+    color: var(--text-color);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.flip-card {
+    perspective: 1200px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    text-align: center;
+    transition: transform 0.65s ease;
+    transform-style: preserve-3d;
+    border-radius: 18px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.75rem;
+    border-radius: 18px;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: var(--white);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.95), rgba(0, 79, 255, 0.85));
+    color: var(--white);
+    transform: rotateY(180deg);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.flip-card-back h3 {
+    color: #ffffff;
+}
+
+.flip-card p {
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+.flip-card-front p {
+    color: var(--text-color);
+}
+
+.flip-card-back p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 4rem 20px;
+}
+
+.ia-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px;
+}
+
+.ia-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 5px solid var(--primary-color);
+}
+
+.ia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+    .ia-card-image {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 1.25rem;
+        box-shadow: var(--shadow);
+        object-fit: cover;
+    }
+
+.ia-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.ia-company {
+    font-size: 1rem;
+    color: var(--light-text);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ia-description {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.ia-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.ia-features li {
+    padding: 0.75rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.ia-features li:hover {
+    background-color: #e6f2ff;
+    padding-left: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Animaciones */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .ia-card {
+        padding: 1.5rem;
+    }
+
+    .ia-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .ia-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Página IA - layout */
+.hero img.hero-image {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+}
+
+.ia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.ia-left img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.ia-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.pros-cons .card {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.example-code {
+    background: #0b1220;
+    color: #d6f8ff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+    .ia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
 }
