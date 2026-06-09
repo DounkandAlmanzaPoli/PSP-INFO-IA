@@ -4,10 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Metal IA - IAs</title>
+    <link rel="stylesheet" href="css/style-claude.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="description" content="Metal IA: modelos personalizables con foco en rendimiento y despliegue." />
+    <style>
+        body.metal-ia h1 {
+            margin-top: 0;
+            font-size: 48px;
+        }
+        body.metal-ia section {
+            padding: 40px 10%;
+            margin: 0;
+        }
+        body.metal-ia section#hero {
+            padding-top: 40px;
+            background: url("images/RYZSYVYIFFDDFDSUQXC45RYRTM.gif") center/cover no-repeat;
+            background-size: cover;
+            background-position: center;
+            image-rendering: auto;
+            color: #111;
+        }
+        body.metal-ia p {
+            font-size: 18px;
+        }
+        body.metal-ia section#hero h1,
+        body.metal-ia section#hero p {
+            color: #111;
+            text-shadow: none;
+        }
+        body.metal-ia .btn {
+            padding: 14px 30px;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+        .history-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .history-image {
+            flex: 1 1 320px;
+            max-width: 520px;
+        }
+        .history-image img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+        }
+        .history-text {
+            flex: 1 1 320px;
+        }
+        .history-text p {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
-<body>
+<body class="metal-ia">
     <nav class="navbar">
         <div class="container">
             <div class="nav-logo">🤖 IAs.dev</div>
@@ -22,62 +76,161 @@
         </div>
     </nav>
 
-    <section class="hero" style="padding:2rem 20px;">
-        <div class="container">
-            <h1>Metal IA</h1>
-            <p class="ia-description">Metal IA ofrece modelos flexibles y personalizables con foco en rendimiento y despliegue. Está orientada a desarrolladores y empresas que requieren adaptar modelos a sus necesidades.</p>
-            <img class="hero-image" src="images/metal-ia.svg" alt="Metal IA imagen representativa">
+    <section id="hero">
+        <h1>Metal IA</h1>
+        <p>
+            Metal IA ofrece modelos flexibles y personalizables con foco en rendimiento, escalabilidad y despliegue. Es ideal para equipos que necesitan ejecutar IA en producción con control y eficiencia.
+        </p>
+        <a href="#que-es" class="btn">
+            Conocer más
+        </a>
+    </section>
+
+    <section id="que-es">
+        <h2>¿Qué es Metal IA?</h2>
+        <p>
+            Metal IA es una plataforma de inteligencia artificial orientada a la personalización y al despliegue eficiente de modelos. Permite a empresas y desarrolladores adaptar soluciones de IA a sus propios datos y procesos.
+        </p>
+        <p>
+            Su propuesta se centra en combinar rendimiento, escalabilidad y compatibilidad con infraestructuras modernas, facilitando la implementación de modelos en producción.
+        </p>
+        <p>
+            Metal IA también ofrece herramientas para monitorear y optimizar modelos, reduciendo costos y mejorando la velocidad de respuesta en aplicaciones reales.
+        </p>
+        <p>
+            Es una opción atractiva para equipos que buscan una solución más controlada y personalizada que las plataformas genéricas de IA.
+        </p>
+    </section>
+
+    <section id="historia">
+        <h2>Historia de Metal IA</h2>
+        <div class="history-row">
+            <div class="history-image">
+                <img src="images/Dplnews_ai_as050620.gif" alt="Historia de Metal IA">
+            </div>
+            <div class="history-text">
+                <p><strong>Metal IA nació</strong> como una iniciativa para dar a las empresas más control sobre sus modelos de inteligencia artificial. Se diseñó pensando en la personalización, el despliegue seguro y la integración con infraestructuras de producción.</p>
+                <p>La creación de Metal IA se centró en resolver los problemas más relevantes de la época: baja adaptabilidad de modelos genéricos, falta de herramientas de monitoreo y dificultades para escalar en entornos reales.</p>
+                <p>Desde sus inicios, la plataforma ha evolucionado hacia un sistema robusto que combina rendimiento, seguridad y customización, permitiendo a los equipos técnicos implementar IA de manera confiable y flexible.</p>
+                <p>Hoy en día, Metal IA es usada principalmente por compañías que buscan un balance entre innovación y control, con especial atención a despliegues en producción y optimización continua.</p>
+            </div>
         </div>
     </section>
 
-    <main class="container main-content" style="padding-top:2rem;">
-        <div class="ia-grid">
-            <div class="ia-left">
-                <img src="images/metal-ia.svg" alt="Infraestructura IA">
+    <section id="caracteristicas">
+        <h2>Características Principales</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>⚙️ Personalización</h3>
+                <p>Permite ajustar modelos a datos específicos y necesidades del negocio.</p>
             </div>
-            <div class="ia-right">
-                <div class="ia-card">
-                    <p><strong>Empresa:</strong> Metal</p>
-                    <h3 class="section-title">Descripción ampliada</h3>
-                    <p>Metal IA está pensada para ayudar a empresas a desplegar modelos eficientes, con herramientas para personalización y optimización en producción. Enfoca su valor en rendimiento y operatividad.</p>
-                    <h3 class="section-title">Casos de uso</h3>
-                    <ul>
-                        <li>Despliegue de modelos en producción</li>
-                        <li>Personalización de modelos para dominios específicos</li>
-                        <li>Optimización y monitorización</li>
-                    </ul>
-                </div>
-
-                <div class="pros-cons">
-                    <div class="card">
-                        <h4>Pros</h4>
-                        <ul>
-                            <li>Optimizado para producción</li>
-                            <li>Herramientas de despliegue</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Contras</h4>
-                        <ul>
-                            <li>Puede requerir inversión en infraestructura</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="ia-card">
-                    <h3 class="section-title">Ejemplo de despliegue</h3>
-                    <pre class="example-code"># CLI deploy
-metal deploy --model my-model --region eu-west
-                    </pre>
-                </div>
+            <div class="card">
+                <h3>🚀 Rendimiento</h3>
+                <p>Optimiza inferencias para reducir latencia y maximizar eficiencia.</p>
+            </div>
+            <div class="card">
+                <h3>📦 Despliegue</h3>
+                <p>Facilita poner modelos en producción con integraciones modernas.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Monitorización</h3>
+                <p>Supervisa métricas de uso y comportamiento del modelo en producción.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Seguridad</h3>
+                <p>Incluye controles para proteger datos y respuestas del modelo.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Escalabilidad</h3>
+                <p>Se adapta a cargas crecientes manteniendo estabilidad y rapidez.</p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <section id="como-usar">
+        <h2>¿Cómo usar Metal IA?</h2>
+        <p>
+            Metal IA permite crear, ajustar y desplegar modelos a través de pipelines de datos eficientes. Conecta tus datos, define tus objetivos y ajusta el modelo según el dominio.</p>
+        <div class="cards">
+            <div class="card">
+                <h3>🧠 Ajuste fino</h3>
+                <p>Entrena el modelo con tus datos para obtener respuestas más precisas.</p>
+            </div>
+            <div class="card">
+                <h3>🌐 Integración</h3>
+                <p>Conecta el modelo con aplicaciones web y servicios backend.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Monitorización</h3>
+                <p>Revisa métricas clave en tiempo real para mejorar el comportamiento.</p>
+            </div>
+            <div class="card">
+                <h3>🧪 Validación</h3>
+                <p>Prueba el modelo antes de desplegarlo en producción.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ventajas">
+        <h2>Ventajas y Desventajas</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>✅ Ventajas</h3>
+                <ul>
+                    <li>Diseñado para producción.</li>
+                    <li>Altamente personalizable.</li>
+                    <li>Fuerte en rendimiento y monitoreo.</li>
+                    <li>Compatible con infraestructuras modernas.</li>
+                    <li>Buen soporte para despliegue continuo.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>⚠️ Desventajas</h3>
+                <ul>
+                    <li>Mayor complejidad para configurarlo.</li>
+                    <li>Requiere inversión en infraestructura.</li>
+                    <li>Puede necesitar conocimientos técnicos para optimizar.</li>
+                    <li>No es tan conversacional como asistentes generalistas.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="uso-mundial">
+        <h2>Uso a nivel mundial</h2>
+        <p>
+            Metal IA se utiliza principalmente en entornos empresariales y de ingeniería donde la personalización
+            y el despliegue en producción son prioritarios. Su adopción crece en mercados con necesidades de
+            rendimiento y control sobre los modelos.
+        </p>
+        <p>
+            Principales regiones de uso:
+        </p>
+        <ul>
+            <li>Norteamérica: adopción en empresas tecnológicas y startups.</li>
+            <li>Europa: despliegues en sectores industrial y financiero, con foco en cumplimiento.</li>
+            <li>Asia-Pacífico: interés en soluciones escalables para comercio y servicios.</li>
+            <li>Latinoamérica: uso creciente en proyectos de data y automatización.</li>
+        </ul>
+        <p>
+            Sectores con mayor uso:
+        </p>
+        <ul>
+            <li>Tecnología y SaaS: integración en productos y APIs privadas.</li>
+            <li>Finanzas: modelado personalizado y análisis de riesgo.</li>
+            <li>Salud y ciencia: proyectos con datos sensibles que requieren control y seguridad.</li>
+            <li>Manufactura y logística: optimización, monitorización y automatización.</li>
+        </ul>
+        <p>
+            Metal IA destaca cuando las organizaciones necesitan adaptar modelos a datos propios, reducir latencia
+            en inferencia y mantener control total sobre el pipeline de despliegue. Su uso suele estar ligado a equipos
+            con capacidades de DevOps/MLops que gestionan infraestructuras de producción.
+        </p>
+    </section>
+
+    <footer>
         <p>&copy; 2026 PSP-INFO-IA | Metal IA</p>
     </footer>
-
     <script src="js/app.js"></script>
 </body>
 </html>
